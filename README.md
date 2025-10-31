@@ -32,11 +32,11 @@ Dengan sistem berbasis web, semua data dapat diakses secara terpusat dan terorga
 
 ## 🗃️ Skema Database
 Struktur basis data sistem ini terdiri dari beberapa entitas utama, yaitu:
-- **Projects**
-- **Teams**
-- **Members**
-- **Tasks**
-- **Task Details**
+- **Proyek**
+- **Tim**
+- **Anggota**
+- **Tugas**
+- **detilTugas**
 
 ![Database Schema](screenshots/database_schema.png)
 
