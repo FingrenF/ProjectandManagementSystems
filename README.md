@@ -1,22 +1,22 @@
 # 💼 IT Project & Team Management System
 
-Website ini merupakan aplikasi berbasis **Laravel** yang dirancang untuk membantu proses pengelolaan proyek, tim, dan tugas dalam sebuah organisasi IT.  
-Aplikasi ini menyediakan fitur pencatatan proyek, pembagian tugas kepada anggota tim, serta laporan aktivitas yang terstruktur.
+Aplikasi berbasis **Laravel** untuk membantu pengelolaan proyek, tim, dan tugas dalam suatu organisasi IT.  
+Sistem ini dirancang untuk memudahkan pemantauan aktivitas proyek, alokasi tugas, serta penyusunan laporan secara terstruktur dan efisien.
 
 ---
 
 ## 🎯 Tujuan Proyek
-Sistem ini dikembangkan untuk mempermudah manajer atau koordinator tim dalam memantau progres proyek dan kinerja anggota.  
-Dengan sistem berbasis web, semua data dapat diakses secara terpusat dan terorganisir.
+Sistem ini dikembangkan untuk menggantikan pencatatan manual dalam pengelolaan proyek dan tim.  
+Dengan sistem berbasis web, seluruh data dapat diakses secara terpusat, akurat, dan mudah diperbarui kapan pun diperlukan.
 
 ---
 
 ## ✨ Fitur Utama
-- **Manajemen Proyek** — menambah, mengubah, dan menghapus data proyek.  
-- **Manajemen Tim** — mengatur anggota yang terlibat dalam setiap proyek.  
-- **Manajemen Tugas (Task)** — mencatat dan memantau setiap tugas yang sedang berlangsung.  
-- **Laporan Aktivitas** — menampilkan data proyek dan tugas dalam bentuk tabel dan ringkasan.  
-- **Validasi Input & Relasi Database** — menjaga integritas data antar tabel.  
+- **Manajemen Proyek** — menambah, memperbarui, dan menghapus data proyek.  
+- **Manajemen Tim & Anggota** — mencatat anggota yang terlibat dalam setiap proyek.  
+- **Manajemen Tugas (Task Management)** — mengatur tugas-tugas dalam proyek dan status penyelesaiannya.  
+- **Laporan dan Rekap** — menampilkan hasil pekerjaan serta rekap proyek aktif.  
+- **Validasi Data & Relasi Tabel** — menjaga integritas data antar entitas proyek, tim, dan tugas.  
 
 ---
 
@@ -24,31 +24,40 @@ Dengan sistem berbasis web, semua data dapat diakses secara terpusat dan terorga
 - **Framework:** Laravel  
 - **Bahasa Pemrograman:** PHP, JavaScript  
 - **Basis Data:** MySQL  
-- **Frontend:** Bootstrap, Blade Template  
+- **Frontend:** Blade Template, Bootstrap  
 - **Environment:** Laragon  
 - **Version Control:** Git & GitHub  
 
 ---
 
 ## 🗃️ Skema Database
-Struktur basis data sistem ini terdiri dari beberapa entitas utama, yaitu:
-- **Proyek**
-- **Tim**
-- **Anggota**
-- **Tugas**
-- **detilTugas**
+
+Berikut adalah diagram relasi antara entitas utama dalam sistem:
 
 ![Database Schema](screenshots/database_schema.png)
 
-Diagram di atas menunjukkan relasi antara proyek, tim, dan tugas, di mana satu proyek dapat memiliki banyak tugas dan setiap tugas terhubung ke anggota tim tertentu.  
+Diagram ini menunjukkan relasi antar tabel seperti:
+- Satu **project** dapat memiliki banyak **tasks**  
+- Satu **task** terhubung dengan satu atau lebih **members**  
+- **Teams** terdiri dari beberapa **members** yang bekerja dalam satu atau beberapa proyek  
 
 ---
 
-## 📚 Konsep dan Arsitektur
-Aplikasi ini menerapkan pola **MVC (Model–View–Controller)** agar lebih mudah dalam pengelolaan logika bisnis dan tampilan.  
-- **Model:** mengatur interaksi dengan database.  
-- **Controller:** menangani logika proses dan routing.  
-- **View:** menampilkan data dengan Blade Template.  
+## 📸 Tampilan Antarmuka
+
+| Halaman Data | Halaman Laporan |
+|---------------|----------------|
+| ![Data Page](screenshots/data.png) | ![Report Page](screenshots/laporan.png) |
+
+| Halaman Rekap |
+|----------------|
+| ![Rekap Page](screenshots/rekap.png) |
+
+---
+
+## 🧠 Konsep dan Arsitektur
+Aplikasi ini menerapkan pola **MVC (Model–View–Controller)** untuk memisahkan antara logika bisnis, pengolahan data, dan tampilan.  
+Pendekatan ini memudahkan proses pengembangan, debugging, serta kolaborasi antar anggota tim.
 
 ---
 
